@@ -24,5 +24,7 @@ export default async function handler(req, res) {
     res.status(500).json({ error: 'Request failed', details: err.message });
   }
   console.log('Cookie:', process.env.SF6_COOKIE);
+  console.log("Using cookie:", process.env.SF6_COOKIE?.slice(0, 20)); // pour vérifier que c'est bien injecté
+
 
 }
